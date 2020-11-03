@@ -5,7 +5,9 @@
 #include "CoreMinimal.h"
 #include <CoreUObject.h>
 #include <Vector.h>
+#include "Windows\AllowWindowsPlatformTypes.h"
 #include <Kinect.h>
+#include "Windows\HideWindowsPlatformTypes.h"
 #include <kinect.Face.h>
 #include <Runtime/Engine/Classes/Engine/Texture2D.h>
 #include "KinectDTO.h"

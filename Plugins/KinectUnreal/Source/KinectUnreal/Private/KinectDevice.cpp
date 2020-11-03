@@ -9,6 +9,9 @@
  
 EXTERN_C IMAGE_DOS_HEADER __ImageBase;
 
+#define FALSE 0
+#define TRUE 1
+
 KinectDevice::KinectDevice()
 {
 	m_pKinectSensor = NULL;

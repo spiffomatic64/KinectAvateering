@@ -29,9 +29,10 @@ public class KinectUnreal : ModuleRules
 
     public KinectUnreal(ReadOnlyTargetRules Target) : base(Target)
 	{
-	    //OptimizeCode = CodeOptimization.Never;
+		PCHUsage = ModuleRules.PCHUsageMode.UseExplicitOrSharedPCHs;
+		//OptimizeCode = CodeOptimization.Never;
 
-        string KinectPathEnvVar = "%KINECTSDK20_DIR%";
+		string KinectPathEnvVar = "%KINECTSDK20_DIR%";
         string ExpandedKinectEnvVar = Environment.ExpandEnvironmentVariables(KinectPathEnvVar);
 
         //NOTE (OS): Safety check for comptuers that don't have the kinect plugin
@@ -97,8 +98,7 @@ public class KinectUnreal : ModuleRules
 				"Slate",
 				"SlateCore",
                 "RHI",
-                "RenderCore",
-                "ShaderCore"
+                "RenderCore"
 				// ... add private dependencies that you statically link with here ...	
 			}
 			);
